@@ -15,7 +15,7 @@ Lab Algoritma dan Pemrograman Asistensi AP-06 2024
 
    sh
 
-   git clone https://github.com/YOUR_USERNAME/Lab-AP-07-2024.git
+   git clone https://github.com/YOUR_USERNAME/Lab-AP-06.git
 
    
 
@@ -23,7 +23,7 @@ Lab Algoritma dan Pemrograman Asistensi AP-06 2024
 
    sh
 
-   cd Lab-AP-07-2024
+   cd Lab-AP-06
    git branch NIM_ANDA
    git checkout NIM_ANDA
    git config user.name USERNAME_GITHUB
