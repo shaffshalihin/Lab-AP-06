@@ -31,11 +31,7 @@ Lab Algoritma dan Pemrograman Asistensi AP-06 2024
 
    
 
-4. Setelah anda pindah ke *branch* yang telah anda buat, buat sebuah folder dengan nama *NIM* anda dan masuk ke folder tersebut.
-   sh
-
-   mkdir NIM_ANDA
-   cd NIM_ANDA
+4. Setelah masuk ke dalam Folder Lab-AP-06, Masuk ke dalam folder dengan NIM anda
 
    
 
