@@ -1,19 +1,12 @@
-harga_hari_ini = 105.0
-harga_kemarin = float(input("Masukkan harga kemarin: "))
+saham = int(input("Masukkan harga saham kemarin: "))
+harga_hari_ini = 105
+persentase = (harga_hari_ini - saham)/saham * 100
 
-perubahan_persentase = ((harga_hari_ini - harga_kemarin) / harga_kemarin) * 100
+rekomendasi = {
+    persentase > 5: "Beli",
+    -3 <= persentase < 5: "Tahan",
+    persentase <= -3: "Jual"
+}
 
-while(perubahan_persentase > 5.0):
-    rekomendasi = "beli"
-    break;
-
-while(perubahan_persentase <= 5.0 and perubahan_persentase >= -3.0):
-    rekomendasi = "tahan"
-    break;
-
-while(perubahan_persentase < -3.0):
-    rekomendasi = "jual"
-    break;
-
-print("Perubahan persentase harga saham:", perubahan_persentase, "%")
-print("rekomendasi investasi:", rekomendasi)
+print(f"Persentase = {persentase:.2f}%")
+print(rekomendasi[True])
