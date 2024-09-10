@@ -6,7 +6,7 @@ PerubahanPersen = ((HargaSekarang - HargaKemarin) / HargaKemarin)*100
 
 rekomendasi_list = ["Jual", "Tahan", "Beli"]
 
-index = (PerubahanPersen > 5) * 2 + (-3 <= PerubahanPersen <= 5) * 1
+index = (PerubahanPersen > 5) * 2 + (-3 <= PerubahanPersen <= 5)
 
 print(f"perubahan harga saham: {PerubahanPersen}%")
-print(f"rekomendasi {rekomendasi_list[True]}")
+print(f"rekomendasi {rekomendasi_list[index]}")
