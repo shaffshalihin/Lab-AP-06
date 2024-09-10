@@ -1,12 +1,13 @@
-saham = int(input("Masukkan harga saham kemarin: "))
-harga_hari_ini = 105
-persentase = (harga_hari_ini - saham)/saham * 100
+saham_kemarin = int(input("harga saham kemarin: "))
 
-rekomendasi = {
-    persentase > 5: "Beli",
-    -3 <= persentase < 5: "Tahan",
-    persentase <= -3: "Jual"
-}
+saham_sekarang = int(105)
+persentase = ((saham_sekarang - saham_kemarin)/ saham_kemarin )*100
 
-print(f"Persentase = {persentase:.2f}%")
-print(rekomendasi[True])
+print(f"Perubahan persentase harga saham: {persentase:.2f}%")
+
+beli = persentase > 5 
+tahan = 5>=persentase>=-3
+jual = persentase<=-3
+
+rekomendasi = "Beli"*beli + "Tahan"*tahan + "Jual"*jual
+print(f"Rekomendasi Investasi: {rekomendasi}")
