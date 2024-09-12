@@ -1,21 +1,12 @@
-def hitung_persen(harga_kemarin, harga_hari_ini):
-    return ((harga_hari_ini - harga_kemarin) / harga_kemarin) * 100
+# Program Saham
+print("# Program Saham #")
 
-rekomendasi_investasi = [
-    (lambda x: x > 5, "Beli"),
-    (lambda x: -3 <= x <= 5, "Tahan"),
-    (lambda x: x < -3, "Jual")
-]
+saham = float(input("Masukkan Harga Saham Kemarin : "))
+saham_hari_ini = 105
+rekomendasi = ["Jual", "Tahan", "Beli"]
 
-harga_kemarin = float(input("Masukkan harga saham kemarin: "))
+persentase = (saham_hari_ini - saham)/saham * 100
+hasil = rekomendasi[(persentase > -3) + (persentase > 5)]
 
-harga_hari_ini = 105.0
-
-persentase_perubahan = hitung_persen(harga_kemarin, harga_hari_ini)
-
-rekomendasi = next(
-    rekomendasi for kondisi, rekomendasi in rekomendasi_investasi if kondisi(persentase_perubahan)
-)
-
-print(f"Persentase perubahan harga: {persentase_perubahan:.2f}%")
-print(f"Rekomendasi investasi: {rekomendasi}")
+print(f"Perubahan Persentase Harga Saham = {persentase:.2f}%")
+print(f"Rekomendasi Investasi: {hasil}")

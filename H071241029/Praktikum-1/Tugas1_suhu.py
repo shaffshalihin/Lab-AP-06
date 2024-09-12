@@ -1,13 +1,12 @@
-print("## Program Konversi Suhu ##")
-print("===========================")
-print()
+# program konversi suhu
+print("# Program Konversi Suhu #")
 
-celcius = float(input("Masukkan Suhu Celcius : "))
+celcius = float(input("Masukkan Suhu dalam Celcius : "))
 
-kelvin = int(celcius + 273.15)
+kelvin = float(celcius + 273.15)
 reamur = int(celcius * (4/5))
 fahrenheit = int((9/5 * celcius) + 32)
 
-print(celcius, "derajat Celcius =", kelvin, "derajat Kelvin")
-print(celcius, "derajat Celcius =", reamur, "derajat Reamur")
-print(celcius, "derajat Celcius =", fahrenheit, "derajat Fahrenheit")
+print(f"Hasil konversi dari suhu {celcius} derajat Celcius ke Kelvin adalah : {kelvin:.02f}K")
+print(f"Hasil konversi dari suhu {celcius} derajat Celcius ke Reamur adalah : {reamur}R")
+print(f"Hasil konversi dari suhu {celcius} derajat Celcius ke Fahrenheit adalah : {fahrenheit}F")

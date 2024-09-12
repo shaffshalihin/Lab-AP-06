@@ -1,6 +1,5 @@
-print("## Program Konversi Detik ##")
-print("===========================")
-print()
+# program konversi detik
+print("# Program Konversi Detik #")
 
 jumlahdetik = int(input("Masukkan Detik : ")) 
 jam = jumlahdetik // 3600
