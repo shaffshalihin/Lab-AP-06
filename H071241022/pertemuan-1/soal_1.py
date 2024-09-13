@@ -1,6 +1,6 @@
 saham_kemarin = int(input("harga saham kemarin: "))
 
-saham_sekarang = int(105)
+saham_sekarang = 105
 persentase = ((saham_sekarang - saham_kemarin)/ saham_kemarin )*100
 
 print(f"Perubahan persentase harga saham: {persentase:.2f}%")
