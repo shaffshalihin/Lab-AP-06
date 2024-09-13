@@ -1,18 +1,26 @@
-kuota = input(input("Masukkan jumlah data yang digunakan (GB): "))
-jam_sibuk = input("Apakah mayoritas penggunaan di luar jam sibuk (off-peak) atau di jam sibuk (peak)? ")
-jenis_pengguna = input("Apakah Anda pengguna Personal atau Bisnis? ").lower()
+penggunaan_data = float(input("Masukkan penggunaan data dalam GB: "))
+waktu_penggunaan = input("Masukkan waktu penggunaan (peak/Off-Peak): ")
+jenis_pengguna = input("Masukkan jenis pengguna (Personal/Bisnis): ")
 
-if jenis_pengguna == "bisnis":
-  if kuota > 50 and jam_sibuk == "peak":
-    print("Paket yang sesuai: Paket C")
-  elif kuota > 50:
-    print("Paket yang sesuai: Paket D")
-  else:
-    print("Tidak ada paket cocok")
+if penggunaan_data < 10:
+  penggunaan = "Ringan"
+elif penggunaan_data <= 50 and penggunaan_data >= 10:
+  penggunaan = "Sedang"
 else:
-  if kuota > 30 and jam_sibuk == "peak":
-    print("Paket yang sesuai: Paket B")
-  elif kuota <= 30:
-    print("Paket yang sesuai: Paket A")
-  else:
-    print("Tidak ada paket cocok")
+  penggunaan = "Berat"
+
+if waktu_penggunaan == "Off-Peak":
+  waktu = "Luar Jam Sibuk"
+else:
+  waktu = "Jam Sibuk"
+
+if penggunaan == "Ringan" and waktu == "Luar Jam Sibuk" and jenis_pengguna == "personal":
+  print("Rekomendasi: Paket A")
+elif penggunaan == "Sedang" and waktu == "Jam Sibuk" and jenis_pengguna == "personal":
+  print("Rekomendasi: Paket B")
+elif penggunaan == "Berat" and (jenis_pengguna == "Personal" or jenis_pengguna == "Bisnis") and waktu == "Jam Sibuk":
+  print("Rekomendasi: Paket C")
+elif penggunaan == "Berat" and waktu == "Luar Jam Sibuk" and jenis_pengguna == "Bisnis":
+  print("Rekomendasi: Paket D")
+else:
+  print("Tidak ada paket yang cocok")
