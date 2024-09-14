@@ -7,4 +7,3 @@ pesan = ["tidak ditemukan dalam", "merupakan bagian dari"][output]
 
 hasil = f"{karakter} {pesan} '{kalimat}'"
 print(hasil)
-print(type(hasil))

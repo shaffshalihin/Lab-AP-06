@@ -9,3 +9,7 @@ rekomendasi = rekomendasiInvestasi [(perubahanPersen >= -3) + (perubahanPersen >
 print(f"Perubahan persentase harga saham : {perubahanPersen:.2f}%")
 print(f"Rekomendasi investasi: {rekomendasi}")
 print(type(rekomendasi))
+
+print(rekomendasiInvestasi[0])
+print(rekomendasiInvestasi[1])
+print(rekomendasiInvestasi[2])
