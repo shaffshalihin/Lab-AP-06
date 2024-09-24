@@ -2,6 +2,8 @@ penggunaan_data		= float(input("Masukkan penggunaan data bulanan (dalam GB): "))
 waktu_penggunaan	= input("Apakah mayoritas penggunaan di luar jam sibuk (11 malam - 7 pagi)? (ya/tidak): ").strip().lower()
 jenis_pengguna		= input("Masukkan jenis pengguna (personal/bisnis): ").strip().lower()
 
+# paket = ''
+
 if penggunaan_data < 10:
     kategori_penggunaan = "ringan"
 elif 10 <= penggunaan_data <= 50:
@@ -20,5 +22,7 @@ elif kategori_penggunaan == "berat":
         paket = "Paket D, Penggunaan Berat dengan mayoritas penggunaan di Luar Jam Sibuk oleh Pengguna Bisnis."
     else:
         paket = "Tidak ada paket yang cocok."
+else:
+    paket = "Tidak ada paket yang cocok"
 
 print(f"Paket yang sesuai: {paket}")
