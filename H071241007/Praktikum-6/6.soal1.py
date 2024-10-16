@@ -12,7 +12,6 @@ def tambah_barang():
     inventory.append({"kode": kode, "nama": nama, "jumlah": jumlah, "harga": harga})
     print("Barang berhasil ditambahkan!\n")
 
-
 def hapus_barang():
     kode = input("Masukkan kode barang yang ingin dihapus: ").lower()
     for barang in inventory:
